@@ -5,7 +5,8 @@ set -o errexit
 pip install -r requirements.txt
 
 mkdir dist
-mkdir dist/static
+cd dist
+mkdir static
 
 python manage.py collectstatic 
 python manage.py migrate
